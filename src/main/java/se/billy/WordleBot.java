@@ -22,8 +22,9 @@ public class WordleBot implements Closeable {
     }
 
     public static void main(String[] args) {
-        var bot = new WordleBot();
-        bot.play();
+        try (var bot = new WordleBot()) {
+            bot.play();
+        }
     }
 
     private void play() {

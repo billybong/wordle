@@ -46,7 +46,7 @@ public class WordleClientImpl implements AutoCloseable {
         }
     }
 
-    public List<Fact> determineLetterState() throws NotAWordException {
+    private List<Fact> determineLetterState() throws NotAWordException {
         Set<Fact.NotInWord> absentLetters = new HashSet<>();
         Set<Fact.Present> presentLetters = new HashSet<>();
         List<Fact.Correct> correctLetters = new ArrayList<>();
